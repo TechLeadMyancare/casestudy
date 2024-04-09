@@ -33,9 +33,17 @@ fun main() {
 
     println("=====================================")
     println("total doctor count ${doctors.size}")
-    println("waiting time for queue ${patientQueuePosition} is  ${getWaitingTime(doctors, patientQueuePosition)} minute ")
+    println(
+        "waiting time for queue ${patientQueuePosition} is  ${
+            getWaitingTime(
+                doctors,
+                patientQueuePosition
+            )
+        } minute "
+    )
 
 }
+
 fun getWaitingTime(doctors: List<Doctor>, queuePosition: Int): Int {
     val allDoctor = doctors.size
     val patientsBeforePatient = queuePosition - 1
